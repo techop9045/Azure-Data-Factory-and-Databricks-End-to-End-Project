@@ -1,0 +1,22 @@
+-----ADF Pipeline Successful Run
+
+{
+  "pipeline": "@{pipeline().Pipeline}",
+  "Success/Failure": "Success",
+  "DatafactoryName": "@{pipeline().DataFactory}",
+  "PipelinerunId": "@{pipeline().RunId}",
+  "Time": "@{pipeline().TriggerTime}",
+  "Message": "Pipeline has run successfully."
+}
+
+
+------ Error during run in ADF Pipeline
+
+{
+"pipeline":"@{pipeline().Pipeline}",
+  "Success/Failure":"Success",
+  "DatafactoryName":"@{pipeline().DataFactory}",
+  "PipelinerunId":"@{pipeline().RunId}",
+  "Time":"@{pipeline().TriggerTime}",
+  "Message":"variables('Error Message')"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "pipeline": {
+      "type": "string"
+    },
+    "Success/Failure": {
+      "type": "string"
+    },
+    "DatafactoryName": {
+      "type": "string"
+    },
+    "PipelinerunId": {
+      "type": "string"
+    },
+    "Time": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "string"
+    }
+  }
+}
